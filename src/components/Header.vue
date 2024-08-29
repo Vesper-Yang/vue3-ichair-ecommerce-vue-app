@@ -1,5 +1,5 @@
 <!-- 网页顶部的导航栏 -->
- 
+
 <template>
   <header id="home">
     <RouterLink to="/" class="logo">iChair</RouterLink>
@@ -23,13 +23,17 @@
         </RouterLink>
       </li>
     </ul>
-    <div class="features"></div>
+    <div class="features">
+      <CartBtn />
+    </div>
   </header>
 </template>
 
 <script setup>
 import { navsData } from '@/data/data';
 import { ref } from 'vue';
+
+import CartBtn from './CartBtn.vue';
 
 const navs = ref(navsData);
 
@@ -42,7 +46,6 @@ const handleNavActive = id => {
     return nav
 })
 }
-
 </script>
 
 
