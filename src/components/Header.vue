@@ -3,26 +3,7 @@
 <template>
   <header id="home">
     <RouterLink to="/" class="logo">iChair</RouterLink>
-    <ul class="nav">
-      <li v-for="(nav) in navs" :key="nav.id">
-        <RouterLink 
-          to="/" 
-          v-if="nav.name === 'Home'" 
-          @click="handleNavActive(nav.id)"
-          :class="{ active: nav.active }"
-        >
-          <i class="bi bi-house-door-fill"></i>
-        </RouterLink>
-        <RouterLink
-          v-else
-          to="/"
-          @click="handleNavActive(nav.id)"
-          :class="{ active: nav.active }"
-        >
-          {{ nav.name }}
-        </RouterLink>
-      </li>
-    </ul>
+    <Nav />
     <div class="features">
       <CartBtn />
     </div>
@@ -30,24 +11,9 @@
 </template>
 
 <script setup>
-import { navsData } from '@/data/data';
-import { ref } from 'vue';
-
 import CartBtn from './CartBtn.vue';
-
-const navs = ref(navsData);
-
-const handleNavActive = id => {
-  navs.value.map(nav => {
-    nav.active = false
-    if(nav.id === id) {
-      nav.active = true
-    }
-    return nav
-})
-}
+import Nav from './Nav.vue';
 </script>
-
 
 <style scoped>
     header {
@@ -65,29 +31,6 @@ const handleNavActive = id => {
     color: #ffffff;
     letter-spacing: 2px; /* 字体间距 */
     font-weight: 800;
-  }
-
-  .nav {
-    display: flex;
-  }
-
-  .nav li {
-    list-style: none;
-    margin: 0 16px;
-  }
-
-  .nav li a {
-    color: #ffffff;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-
-  .nav li:hover a,
-  .nav li a.active {
-    color: var(--primary);
   }
 
   .features {

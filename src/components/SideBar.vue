@@ -2,7 +2,11 @@
 
 <template>
   <div class="sideBar">
-    <a class="menu">
+    <a
+      class="menu"
+      :class="{active: active}"
+      @click.stop.prevent="handleToggleActive()"
+    >
       <i class="bi bi-menu-app-fill"></i>
     </a>
     <ul class="sci" >
@@ -13,23 +17,26 @@
       </li>
     </ul>
   </div>
+  <SideMenu :active="active" />
 </template>
 
 <script setup>
-  const scis = [
-    {
-      id: 1,
-      icon: 'bi bi-meta'
-    },
-    {
-      id: 2,
-      icon: 'bi bi-twitter-x'
-    },
-    {
-      id: 3,
-      icon: 'bi bi-instagram'
-    }
-  ]
+import { ref } from 'vue';
+import SideMenu from './SideMenu.vue';
+
+const scis = [
+  {id: 1, icon: 'bi bi-meta'},
+  {id: 2, icon: 'bi bi-twitter-x'},
+  {id: 3, icon: 'bi bi-instagram'}
+]
+
+const active = ref(false)
+
+const handleToggleActive = () => {
+  active.value = !active.value
+}
+
+
 </script>
 
 <style scoped>
@@ -55,7 +62,7 @@
   }
 
   .menu.active {
-    transform: rotateZ(100deg);
+    transform: rotateZ(180deg);
   }
 
   .sci {
