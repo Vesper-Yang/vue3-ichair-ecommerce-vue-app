@@ -1,3 +1,5 @@
+<!-- 网页顶部的导航栏: 右侧的购物车按钮，进入购物车的入口 -->
+
 <template>
   <div class="cart-btn">
     <RouterLink to="/cart" class="cart">

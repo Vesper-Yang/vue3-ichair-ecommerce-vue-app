@@ -56,7 +56,7 @@ const handleNavActive = id => {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 100px 30px 100px;
+    padding: 30px 100px 30px 200px;
     z-index: 1100;
   }
   
