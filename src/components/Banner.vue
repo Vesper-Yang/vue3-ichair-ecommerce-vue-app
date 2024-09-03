@@ -22,7 +22,7 @@ onMounted(() => {
 
 const handleBannerChange = id => {
   items.value.map(item => {
-    items.active = false
+    item.active = false
     if(item.id === id) {
       item.active = true
     }
