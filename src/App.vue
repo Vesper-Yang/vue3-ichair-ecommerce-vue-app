@@ -1,6 +1,9 @@
 <template>
   <SideBar/>
   <Header />
+  <main id="id">
+    <RouterView />
+  </main>
 </template>
 
 <script setup>

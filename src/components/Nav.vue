@@ -1,4 +1,4 @@
-<!-- 网页的菜单：因为在sideBar和Header里都要显示，所以单独提取出来 -->
+<!-- 网页的导航菜单：因为在sideBar和Header里都要显示，所以单独提取出来 -->
 
 <template>
   <ul class="nav">

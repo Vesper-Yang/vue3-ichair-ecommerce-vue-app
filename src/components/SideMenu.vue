@@ -1,3 +1,6 @@
+<!-- 界面左侧的菜单栏，展开为导航栏 -->
+
+
 <template>
   <div class="side-menu" :class="{active: active}">
     <Nav />

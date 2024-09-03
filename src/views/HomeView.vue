@@ -1,11 +1,7 @@
 <template>
-  <div>hello HomeView</div>
+    <Banner/>
 </template>
 
-
 <script setup>
+import Banner from '../components/Banner.vue'
 </script>
-
-<style scoped>
-
-</style>
