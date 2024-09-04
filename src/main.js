@@ -8,6 +8,8 @@ import App from './App.vue'
 import router from './router'
 
 const app = createApp(App)
+// 共享购物车，这样就可以在所有页面、组件中访问
+app.provide('cart', [])
 
 app.use(router)
 
