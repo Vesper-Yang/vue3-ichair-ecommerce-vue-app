@@ -31,7 +31,7 @@ const props = defineProps({
   align-items: center;
   justify-content: space-between;
   transition: 1s;
-  z-index: 1000;
+  z-index: 1999;
 }
 
 .side-menu.active {
