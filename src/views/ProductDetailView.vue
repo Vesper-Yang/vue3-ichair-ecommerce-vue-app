@@ -123,6 +123,7 @@ const handleColorChange = (color, id) => {
   })
 }
 
+// 使用共享的购物车数据
 const cart = ref(inject('cart'))
 const handleAddToCart = item => {
   const itemToAdd = {... item, color: selectedColor.value, qty:qty.value}

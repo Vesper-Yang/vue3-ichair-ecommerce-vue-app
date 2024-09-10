@@ -66,13 +66,13 @@ const props = defineProps({
   transition: 1s;
   opacity: 0;
   visibility: hidden;
-  transform: scale(0);
+  transform: scale(0); /* 将元素的缩放比例设置为 0。这意味着元素会被缩小到完全不可见 */
 }
 
 .banner-slide.active {
   opacity: 1;
   visibility: visible;
-  transform: scale(1);
+  transform: scale(1); /* 将元素的缩放比例设置为 1。元素会以其原始尺寸显示，不进行缩放。 */
 }
 
 .content {
@@ -160,12 +160,12 @@ const props = defineProps({
   height: 600px;
   border-radius: 50%;
   /* background: var(--primary); */
-  transform: rotateZ(180deg);
+  transform: rotateZ(180deg); /* 元素会被旋转到正好与原始位置相反的方向，上下颠倒 */
   transition: ease-in-out 1s;
 }
 
 .item-img .img-container.active {
-  transform: rotateZ(0);
+  transform: rotateZ(0); /* 当 .img-container 的 active 类被添加时，旋转效果会从 180 度过渡到 0 度 */
 }
 
 .item-img .img-container::before {

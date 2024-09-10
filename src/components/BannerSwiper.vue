@@ -14,7 +14,7 @@
 
 
 <script setup>
-// import Swiper core and required modules 核心和所需模块
+// import Swiper core and required modules 核心和所需模块(向左向右的箭头)
 import {  Navigation } from 'swiper/modules'
 // Import Swiper Vue.js components 滑动容器和单个滑块
 import { Swiper, SwiperSlide } from 'swiper/vue'
@@ -46,7 +46,7 @@ const props = defineProps({
 <style>
 .swiper {
   position: absolute;
-  bottom: 100px; /* 改回50 */
+  bottom: 50px;
   left: 10%;
   width: 30%;
   padding-top: 10px;
